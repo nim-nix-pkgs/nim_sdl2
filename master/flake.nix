@@ -11,6 +11,7 @@
   inputs.src-sdl2-master.ref   = "refs/heads/master";
   inputs.src-sdl2-master.owner = "jyapayne";
   inputs.src-sdl2-master.repo  = "nim-sdl2";
+  inputs.src-sdl2-master.dir   = "";
   inputs.src-sdl2-master.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
