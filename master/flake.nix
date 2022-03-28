@@ -11,8 +11,15 @@
   inputs.src-sdl2-master.ref   = "refs/heads/master";
   inputs.src-sdl2-master.owner = "jyapayne";
   inputs.src-sdl2-master.repo  = "nim-sdl2";
-  inputs.src-sdl2-master.dir   = "";
   inputs.src-sdl2-master.type  = "github";
+  
+  inputs."github.com/jyapayne/nimterop".owner = "nim-nix-pkgs";
+  inputs."github.com/jyapayne/nimterop".ref   = "master";
+  inputs."github.com/jyapayne/nimterop".repo  = "github.com/jyapayne/nimterop";
+  inputs."github.com/jyapayne/nimterop".dir   = "";
+  inputs."github.com/jyapayne/nimterop".type  = "github";
+  inputs."github.com/jyapayne/nimterop".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."github.com/jyapayne/nimterop".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
